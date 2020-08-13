@@ -1,7 +1,7 @@
 <template>
 	<div class="working-container">
 		<div class="working-title">今天你划水了吗？</div>
-		<el-row :gutter="20">
+		<el-row :gutter="20" class="working-form">
 			<el-form ref="workingForm" :rules="workRules" inline :model="workForm" label-width="82px">
 				<el-row>
 					<el-col :span="5">
@@ -353,12 +353,16 @@ export default {
 </script>
 <style lang='scss' scoped>
 .working-container {
-	margin: auto;
+	margin: 20px auto;
 	width: 80%;
 	.working-title {
-		margin: 20px 0;
-		font-size: 36px;
+		padding: 20px 0;
+		font-size: 26px;
 		text-align: center;
+		border-bottom: 1px solid #ccc;
+	}
+	.working-form{
+		margin-top: 20px;
 	}
 	.workneedDiv {
 		width: 90px;

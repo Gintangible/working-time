@@ -1,7 +1,7 @@
 <template>
 	<div class="result-container">
 		<div class="result-title">{{workInfo.curName}}的工作详情</div>
-		<el-table border :data="resultData" style="width: 100%">
+		<el-table class="result-data" border :data="resultData" style="width: 100%">
 			<el-table-column align="center" type="index" label="序号" width="80"></el-table-column>
 			<el-table-column align="center" prop="name" label="姓名"></el-table-column>
 			<el-table-column align="center" prop="days" label="天数"></el-table-column>
@@ -116,12 +116,16 @@ export default {
 </script>
 <style lang='scss' scoped>
 .result-container {
-	margin: auto;
+	margin: 20px auto;
 	width: 80%;
 	.result-title {
-		margin: 20px 0;
-		font-size: 36px;
+		padding: 20px 0;
+		font-size: 26px;
 		text-align: center;
+		border-bottom: 1px solid #ccc;
+	}
+	.result-data{
+		margin-top: 20px;
 	}
 	.result-footer {
 		margin-top: 20px;
